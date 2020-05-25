@@ -5,11 +5,14 @@ import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
 
+import com.example.fragmentandviewpager_20200525.adapters.MyViewPagerAdapter;
 import com.example.fragmentandviewpager_20200525.databinding.ActivityMainBinding;
 
 public class MainActivity extends BaseActivity {
 
     ActivityMainBinding binding;
+
+    MyViewPagerAdapter mvpa;
 
 
     @Override
@@ -27,6 +30,8 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setValues() {
+        mvpa = new MyViewPagerAdapter(getSupportFragmentManager());
+        binding.myViewPager.setAdapter(mvpa);
 
     }
 }

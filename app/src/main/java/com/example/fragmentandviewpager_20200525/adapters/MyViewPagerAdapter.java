@@ -23,16 +23,16 @@ public class MyViewPagerAdapter extends FragmentPagerAdapter {
         if(position==0){
             return new FirstFragment();
         }
-        else if(position ==2){
+        else if(position ==1){
             return new SecondFragment();
         }
         else{
-            return new ThirdFragment()
+            return new ThirdFragment();
         }
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return 3;
     }
 }
